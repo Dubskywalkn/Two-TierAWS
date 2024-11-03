@@ -4,33 +4,8 @@ Two-Tier AWS Architecture
 Overview
 This project implements a two-tier architecture on AWS using Terraform. The infrastructure includes a VPC, public and private subnets, internet gateway, security groups, and EC2 instances in a two-tier configuration. The architecture is designed for hosting a web server and a database server, following a secure and scalable pattern.
 
-Project Structure
-Two-TierAWS/
-├── modules/                   # Optional: Folder for reusable Terraform modules
-│   ├── ec2/                   # Module for EC2 instances
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── rds/                   # Module for RDS instances
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── vpc/                   # Module for VPC and networking
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-├── main.tf                    # Root Terraform file to bring all modules together
-├── variables.tf               # Global variable definitions
-├── outputs.tf                 # Global output definitions
-├── provider.tf                # Provider configurations (e.g., AWS region)
-├── terraform.tfvars           # Optional: Environment-specific variables
-├── .gitignore                 # Git ignore file for Terraform files and sensitive information
-├── README.md                  # Project overview and documentation
-├── docs/                      # Documentation folder for additional project resources
-│   ├── architecture-diagram.png  # Architecture diagram image
-│   └── notes.md               # Optional: Additional notes or documentation
-└── scripts/                   # Optional: Any helper scripts
-    └── setup.sh               # Example setup script if any additional setup is required
+#Project Structure
+Two-TierAWS/ ├── modules/ # Optional: Folder for reusable Terraform modules │ ├── ec2/ # Module for EC2 instances │ │ ├── main.tf │ │ ├── variables.tf │ │ └── outputs.tf │ ├── rds/ # Module for RDS instances │ │ ├── main.tf │ │ ├── variables.tf │ │ └── outputs.tf │ └── vpc/ # Module for VPC and networking │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── main.tf # Root Terraform file to bring all modules together ├── variables.tf # Global variable definitions ├── outputs.tf # Global output definitions ├── provider.tf # Provider configurations (e.g., AWS region) ├── terraform.tfvars # Optional: Environment-specific variables ├── .gitignore # Git ignore file for Terraform files and sensitive information └── README.md # Project overview and documentation
 
 
 Prerequisites
