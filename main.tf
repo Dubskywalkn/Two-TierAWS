@@ -38,7 +38,7 @@ default     = "ami-01e3c4a339a264cc9"
 variable "instance_type" {
 description = "Instance Type for the EC2 Instance"
 type        = string
-default        = "t2.micro"
+default     = "t2.micro"
 }
 
 variable "db_username" {
