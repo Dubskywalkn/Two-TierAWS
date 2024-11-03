@@ -7,7 +7,28 @@ This project implements a two-tier architecture on AWS using Terraform. The infr
 
 ### Project Structure
 
-Two-TierAWS/ ├── modules/ # Optional: Folder for reusable Terraform modules │ ├── ec2/ # Module for EC2 instances │ │ ├── main.tf │ │ ├── variables.tf │ │ └── outputs.tf │ ├── rds/ # Module for RDS instances │ │ ├── main.tf │ │ ├── variables.tf │ │ └── outputs.tf │ └── vpc/ # Module for VPC and networking │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── main.tf # Root Terraform file to bring all modules together ├── variables.tf # Global variable definitions ├── outputs.tf # Global output definitions ├── provider.tf # Provider configurations (e.g., AWS region) ├── terraform.tfvars # Optional: Environment-specific variables ├── .gitignore # Git ignore file for Terraform files and sensitive information └── README.md # Project overview and documentation
+Two-TierAWS/
+├── modules/                        # Optional: Folder for reusable Terraform modules
+│   ├── ec2/                        # Module for EC2 instances
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── rds/                        # Module for RDS instances
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   └── vpc/                        # Module for VPC and networking components
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+├── main.tf                         # Root Terraform file to bring all modules together
+├── provider.tf                     # Provider configuration (e.g., AWS region)
+├── variables.tf                    # Global variable definitions
+├── outputs.tf                      # Global output definitions
+├── terraform.tfvars                # Optional: Environment-specific variable values
+├── .gitignore                      # Git ignore file for Terraform files and sensitive information
+└── README.md                       # Project overview and documentation
+
 
 
 ### Prerequisites
