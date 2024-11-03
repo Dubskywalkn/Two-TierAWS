@@ -1,0 +1,15 @@
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Backup files created by Terraform
+*.backup
+
+# .terraform directory, which stores provider plugins
+.terraform/
+
+# Override files (sometimes used locally)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
