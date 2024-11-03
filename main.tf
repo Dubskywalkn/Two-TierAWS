@@ -124,6 +124,7 @@ resource "aws_db_subnet_group" "main" {
 }
 
 #security_groups.tf
+# Security Group for the EC2 Server
 resource "aws_security_group" "web_sg" {
   vpc_id = aws_vpc.main_vpc.id
   ingress {
@@ -143,6 +144,7 @@ resource "aws_security_group" "web_sg" {
   }
 }
 
+# Security Group for the RDS
 resource "aws_security_group" "db_sg" {
   vpc_id = aws_vpc.main_vpc.id
   ingress {
@@ -175,6 +177,7 @@ resource "aws_instance" "web_server" {
   }
 }
 
+#app server instance
 resource "aws_instance" "app_server" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
@@ -188,6 +191,7 @@ resource "aws_instance" "app_server" {
 
 
 #database.tf
+#db instance
 resource "aws_db_instance" "db_instance" {
   allocated_storage      = 20
   engine                 = "mysql"
